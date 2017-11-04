@@ -148,7 +148,8 @@ string decode(vector<bool> &coded, map<char, vector<bool>> &table, Node *root) {
 //-----------------------------------------------------------------
 
 int main() {
-	string s = "im is y striiiiing!!!!";
+	string s =
+			"govno zalupa penis her davalka huy blyadina golovka shlyukha zhopa chlen eblan petuh maudila rukoblud ssanina ochko blyadun vagina suka eblanishe vlagalishe perdun drachila";
 	// Создаю ассоциативный массив для связи символа и количества его вхождений
 	map<char, int> m;
 	// Считаю кол-во вхождений каждого символа
@@ -168,14 +169,14 @@ int main() {
 	map<char, vector<bool>> table;
 	// Строю таблицу символ-код
 	buildTable(root, code, table);
-	out(table);  //Выводит таблицу кодировки
+	//out(table);  //Выводит таблицу кодировки
 	// Кодирую свое сообщение
 	vector<bool> coded = encode(s, table);
 	// Выводит закодированное сообщение
 	out(coded);
-	cout << "			Coded size: " << coded.size() / 8 + 1;
+	cout << "	Coded size: " << coded.size() / 8 + 1;
 	// Декодирование
 	string decoded = decode(coded, table, root);
-	cout << endl << decoded << "		Decoded size: " << decoded.length();
+	cout << endl << decoded << "	Decoded size: " << decoded.length();
 	return 0;
 }
