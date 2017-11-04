@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/main.dir/testDir/naiveBinarytree.cpp.o  -o main 
